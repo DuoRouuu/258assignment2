@@ -1,0 +1,85 @@
+﻿ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>OnePiece</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="/css/logo.css" />
+    <link rel="stylesheet" href="/css/公告新闻栏.css" />
+    <link rel="stylesheet" href="/css/kstd.css" />
+    <link rel="stylesheet" href="/css/ztwz.css" />
+</head>
+<body>
+    <!--
+        作者：钙尔奇
+        时间：2021-12-09
+        描述：Logo搜索框
+    -->
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-md-5">
+                <img src="/img/logo.png" class="img-fluid" width="300" />
+            </div>
+            <div class="col-6 col-md-7" style="padding-top: 2.5%;">
+                <form action="/Home/Search">
+                    <div class="input-group">
+                        <input type="text" name="keyword" value="@(Request.QueryString["keyword"])" class="form-control" placeholder="Please enter the content you need to search for" />
+                        <div class="input-group-append">
+                            <button class="btn btn-color" type="submit">Search</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="navbar navbar-expand-md navbar-light bg-color">
+        <div class="container">
+            <ul class="navbar-nav nav-tabs nav-pills">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/Home/Index" _msttexthash="43979" _msthash="60">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" data-toggle="dropdown" href="/Home/Story" >Storytelling</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="/Home/Story" _msttexthash="290836" _msthash="62" _mstvisible="1">The main plot line</a>
+                        <a class="dropdown-item" href="https://www.yhdmp.cc/s_all?ex=1&amp;kw=%E6%B5%B7%E8%B4%BC%E7%8E%8B" _msttexthash="566917" _msthash="63" _mstvisible="1">Follow-up recommendation</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" data-toggle="dropdown" href="/Home/Characters">Character introduction</a>
+                    <div class="dropdown-menu dropright">
+                        <a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="/Home/Characters">pirate</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/Home/Characters" _msttexthash="200252" _msthash="66">The Straw Hats</a>
+                            <a class="dropdown-item" href="/Home/Characters" _msttexthash="208026" _msthash="67">Four Emperors</a>
+                            <a class="dropdown-item" href="/Home/Characters" _msttexthash="813514" _msthash="68">His Majesty the Seven Martial Seas</a>
+                            <a class="dropdown-item" href="/Home/Characters" _msttexthash="573612" _msthash="69">The most wicked generation</a>
+                        </div>
+                        <a class="dropdown-item" href="/Home/Characters" _msttexthash="49634" _msthash="70" >navy</a>
+                        <a class="dropdown-item" href="/Home/Characters" _msttexthash="241137" _msthash="71">Revolutionary</a>
+                        <a class="dropdown-item" href="/Home/Characters" _msttexthash="204529" _msthash="72">Pirate Hunter</a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/Home/Search" _msttexthash="74607" _msthash="73">Search</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    
+    @RenderBody()
+
+<div class="container">
+    <footer>
+        <hr />
+        <a href="mailto:2222@qq.com">Send Email(2222@qq.com)</a>
+</footer></div>
+>
+</body>
+</html>
+

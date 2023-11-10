@@ -1,0 +1,55 @@
+﻿@model List < assignment2.Models.Stoty>
+    @{
+        ViewBag.Title = "Search";
+        assignment2.Controllers.Pager pager = ViewBag.pager as assignment2.Controllers.Pager;
+    }
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-12">
+
+                <div class="card ztwz">
+                    <h5>
+
+                        <img src="/img/logo04.jpg" alt="" width="20" height="20"><font _mstmutation="1" _msttexthash="392106" _msthash="106"> The youth of that year </font>
+                    </h5>
+                    <hr>
+
+                    <div class="card-body">
+                        <div class="card-header">
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
+
+                                Title Order by <a href="?pageIndex=1&keyword=@(Request.QueryString["keyword"])&sort=desc">Desc</a> | <a href="?pageIndex=1&keyword=@(Request.QueryString["keyword"])&sort=asc">ASC</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            @{
+                                foreach (var item in Model)
+                                {
+                                    <div class="col-12 col-md-3">
+                                        <a href="#"><img src="@item.ImgUrl"></a>
+                                        <p _msttexthash="1575418" _msthash="107">@item.Title</p>
+                                    </div>
+                                }
+                            }
+
+
+                        </div>
+                        <div style="display: block;justify-content: center">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination">
+                                    <li class="page-item"><a class="page-link" href="?pageIndex=1&keyword=@(Request.QueryString["keyword"])&sort=@(Request.QueryString["sort"])">Home</a></li>
+                                    <li class="page-item"><a class="page-link" href="?pageIndex=@(pager.PrePage)&keyword=@(Request.QueryString["keyword"])&sort=@(Request.QueryString["sort"])">Last</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">@(pager.PageIndex)/@(pager.PageCount)</a></li>
+                                    <li class="page-item"><a class="page-link" href="?pageIndex=@(pager.NextPage)&keyword=@(Request.QueryString["keyword"])&sort=@(Request.QueryString["sort"])" )>Next</a></li>
+                                    <li class="page-item"><a class="page-link" href="?pageIndex=@(pager.PageCount)&keyword=@(Request.QueryString["keyword"])&sort=@(Request.QueryString["sort"])">Trailing</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+

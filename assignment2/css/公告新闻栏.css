@@ -1,0 +1,42 @@
+.card {
+	border: none;
+}
+
+.card h5 {
+	line=height: 3rem;
+}
+
+.card h5 a {
+	color: #343A40;
+	font-size: 14px;
+}
+
+.card h5 a {
+	color: #ab2a84;
+	font-family: garamond;
+}
+
+.card hr {
+	border: 1px solid #AB2A84;
+	margin: 0px;
+}
+
+.card-body {
+	padding: 0.5rem 0px;
+}
+
+.list-group-item {
+	color: #343A40;
+	border: 0;
+	padding-left: 0px;
+	white-space: nowrap;
+	word-break: keep-all;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: block;
+}
+
+
+.list-group-item:hover {
+	text-decoration: none;
+}

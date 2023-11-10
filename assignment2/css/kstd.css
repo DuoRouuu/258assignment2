@@ -1,0 +1,11 @@
+.kstd img{
+	transform: translateY(0rem);
+	transition: all 1s ease-in-out;
+}
+.kstd img:hover{
+	cursor: pointer;
+	transition: translateY;(-0.5rem);
+}
+.kstd p{
+	text-align: center;
+}
